@@ -25,6 +25,7 @@ struct Movie: Decodable, Hashable{
     let releaseDate: String?
     let credits: MovieCredit?
     let videos: MovieVideoResponse?
+    var reviews: [Review]?
     
     var backdropURL: URL {
         return URL(string: "https://image.tmdb.org/t/p/w500\(backdropPath ?? "")")!

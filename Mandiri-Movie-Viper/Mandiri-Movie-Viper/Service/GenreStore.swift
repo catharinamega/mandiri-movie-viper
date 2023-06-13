@@ -39,6 +39,7 @@ class GenreStore: GenreService {
         ], completion: completion)
         
     }
+ 
     
     func fetchMovie(id: Int, completion: @escaping (Result<Movie, EndPointError>) -> ()) {
             guard let url = URL(string: "\(baseAPIURL)/movie/\(id)") else {
@@ -49,6 +50,27 @@ class GenreStore: GenreService {
                 "append_to_response": "videos,credits"
             ], completion: completion)
         }
+    
+    func fetchReviewByMovie(movie_id: Int, completion: @escaping (Result<ReviewResponse, EndPointError>) -> ()) {
+        guard let url = URL(string: "\(baseAPIURL)/movie/\(movie_id)/\(EndPoint.review.rawValue)") else {
+            completion(.failure(.invalidEndpoint))
+            return
+        }
+        print("URL REVIEW 1 \(url)")
+        print("MOVIE ID: \(movie_id)")
+        self.loadURLAndDecode(url: url, completion: completion)
+        
+    }
+    
+//    func fetchReview(movie_id: Int, completion: @escaping (Result<Review, EndPointError>) -> ()) {
+//        guard let url = URL(string: "\(baseAPIURL)/movie/\(movie_id)\(EndPoint.review.rawValue)") else {
+//            completion(.failure(.invalidEndpoint))
+//            return
+//        }
+//        print("URL REVIEW 2 \(url)")
+//        print("MOVIE ID: \(movie_id)")
+//        self.loadURLAndDecode(url: url, completion: completion)
+//        }
     
     //    func searchGenre(query: String, completion: @escaping (Result<GenreResponse, EndPointError>) -> ()) {
     //        guard let url = URL(string: "\(baseAPIURL)/search/genre/") else {

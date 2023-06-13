@@ -30,6 +30,7 @@
 		789CC88F2A382F020047B423 /* MovieDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789CC88E2A382F020047B423 /* MovieDetailPresenter.swift */; };
 		789CC8912A3830B60047B423 /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789CC8902A3830B60047B423 /* SafariView.swift */; };
 		789CC8932A3830DA0047B423 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789CC8922A3830DA0047B423 /* LoadingView.swift */; };
+		789CC8952A3839EC0047B423 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789CC8942A3839EC0047B423 /* Review.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,7 @@
 		789CC88E2A382F020047B423 /* MovieDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailPresenter.swift; sourceTree = "<group>"; };
 		789CC8902A3830B60047B423 /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
 		789CC8922A3830DA0047B423 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		789CC8942A3839EC0047B423 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 		7829FCF12A36EA60004D3271 /* Mandiri-Movie-Viper */ = {
 			isa = PBXGroup;
 			children = (
+				789CC8962A3852690047B423 /* Router */,
 				789CC8872A3813DD0047B423 /* View */,
 				789CC8842A38138E0047B423 /* Bindings */,
 				7829FD1D2A379A8B004D3271 /* Presenter */,
@@ -119,6 +122,7 @@
 				7829FD132A374244004D3271 /* Movie+Stub.swift */,
 				7829FD152A37428B004D3271 /* MovieSection.swift */,
 				7829FD172A374507004D3271 /* Genre+Stub.swift */,
+				789CC8942A3839EC0047B423 /* Review.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -170,6 +174,13 @@
 				789CC8922A3830DA0047B423 /* LoadingView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		789CC8962A3852690047B423 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +270,7 @@
 				7829FD142A374244004D3271 /* Movie+Stub.swift in Sources */,
 				789CC88D2A38157C0047B423 /* MovieDetailView.swift in Sources */,
 				7829FD182A374507004D3271 /* Genre+Stub.swift in Sources */,
+				789CC8952A3839EC0047B423 /* Review.swift in Sources */,
 				7829FD1C2A376522004D3271 /* MovieByGenrePresenter.swift in Sources */,
 				7829FD162A37428B004D3271 /* MovieSection.swift in Sources */,
 				789CC88B2A3815410047B423 /* MovieBackdropCarouselView.swift in Sources */,

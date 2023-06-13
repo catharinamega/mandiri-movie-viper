@@ -15,12 +15,16 @@ protocol GenreService{
     
     func fetchMovie(id: Int, completion: @escaping (Result<Movie, EndPointError>) -> ())
     
+    func fetchReviewByMovie(movie_id: Int, completion: @escaping (Result<ReviewResponse, EndPointError>) -> ())
+    
+   
     
 }
 
 enum EndPoint: String, CaseIterable {
     case genre = "/genre/movie/list"
     case movie = "/discover/movie"
+    case review = "/reviews"
 }
 
 enum EndPointError: Error, CustomNSError {

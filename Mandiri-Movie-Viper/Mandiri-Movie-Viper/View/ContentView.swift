@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @ObservedObject private var genreList = GenreListPresenter()
     @ObservedObject private var movieList = MovieByGenrePresenter()
+    
     var genres: [Genre]?
     var movies: [Movie]?
     
@@ -33,21 +34,21 @@ struct ContentView: View {
                                     ForEach(genre.movies ?? [], id: \.self) { movie in
                                         
     //                                    Text(movie.title ?? "")
-                                        NavigationLink(destination: MovieDetailView(movieId: movie.id ?? 0)) {
+                                        NavigationLink(destination: MovieDetailView( movie: movie)) {
                                             MovieBackdropCard(movie: movie)
                                                 .frame(width: 272, height: 200)
                                         }
                                         .buttonStyle(PlainButtonStyle())
-                                        //                                            .padding(.leading, movie.id == genre.movies.first!.id ? 16 : 0)
-                                        //                                            .padding(.trailing, movie.id == genre.movies.last!.id ? 16 : 0)
-                                        
-                                        
-                                        
-                                        
-                                        
+                                        .onAppear{
+//                                            self.movieList.loadMovieReviews(movie_id: movie.id ?? 0) { movie_id, list_movies in
+//                                                self.movieList.setReviews(movie_id: movie.id ?? 0, listReviews: list_movies ?? [])
+//                                            }
+                                        }
+
                                         
                                     }
                                 }
+                                
                             }
                             
                             
@@ -56,7 +57,11 @@ struct ContentView: View {
                             
                             self.movieList.loadMovies(genre_id: genre.id!) { genre_id, list_movies in
                                 self.genreList.setMovies(genre_id: genre_id, listMovies: list_movies!)
+                                
+                                
                             }
+                            
+                            
                         }
                         
                     }
@@ -81,14 +86,7 @@ struct ContentView: View {
         
     }
     
-    func getMovies(id:Int) {
-        self.genreList.loadGenres {
-            
-            self.movieList.loadMovies(genre_id: id) { genre_id, list_movies in
-                self.genreList.setMovies(genre_id: genre_id, listMovies: list_movies!)
-            }
-        }
-    }
+   
     
     
 }
