@@ -55,7 +55,7 @@ struct MovieDetailView: View {
             self.movieDetailState.loadMovie(id: self.movie.id ?? 0)
             
             
-            
+
 //            self.movieDetailState.setReviews(movie_id: self.movie.id ?? 0, listReviews: self.movie.reviews ?? [])
 //
 //            self.movieReviewDetailState.setReviews(movie_id: self.movie, listReviews: self.movie.reviews ?? [])
@@ -103,17 +103,6 @@ struct MovieDetailListView: View {
                     Text(movie.ratingText).foregroundColor(.yellow)
                 }
                 Text(movie.scoreText)
-            }
-            
-            Divider()
-            
-            VStack{
-                Text(movie.reviews?.first?.author ?? "TES")
-                Text(movie.reviews?.first?.content ?? "TES CONTENT")
-                ForEach(reviewsList) { list in
-                    Text(list.author ?? "")
-                    Text(list.content ?? "")
-                }
             }
             
             Divider()
@@ -176,6 +165,26 @@ struct MovieDetailListView: View {
                                 .foregroundColor(Color(UIColor.systemBlue))
                         }
                     }
+                }
+            }
+            
+            Divider()
+            
+            VStack{
+                Text("User Review")
+                    .font(.headline)
+                    .padding(.top)
+                
+                Divider()
+                
+                ForEach(reviewsList) { list in
+                    Text(list.author ?? "")
+                        .bold()
+                    
+                    Text(list.content ?? "")
+                    
+                    Divider()
+                    
                 }
             }
         }
