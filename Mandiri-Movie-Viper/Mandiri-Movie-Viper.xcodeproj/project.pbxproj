@@ -27,6 +27,9 @@
 		789CC8892A3813F70047B423 /* MovieBackdropCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789CC8882A3813F70047B423 /* MovieBackdropCard.swift */; };
 		789CC88B2A3815410047B423 /* MovieBackdropCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789CC88A2A3815410047B423 /* MovieBackdropCarouselView.swift */; };
 		789CC88D2A38157C0047B423 /* MovieDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789CC88C2A38157C0047B423 /* MovieDetailView.swift */; };
+		789CC88F2A382F020047B423 /* MovieDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789CC88E2A382F020047B423 /* MovieDetailPresenter.swift */; };
+		789CC8912A3830B60047B423 /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789CC8902A3830B60047B423 /* SafariView.swift */; };
+		789CC8932A3830DA0047B423 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789CC8922A3830DA0047B423 /* LoadingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +54,9 @@
 		789CC8882A3813F70047B423 /* MovieBackdropCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieBackdropCard.swift; sourceTree = "<group>"; };
 		789CC88A2A3815410047B423 /* MovieBackdropCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieBackdropCarouselView.swift; sourceTree = "<group>"; };
 		789CC88C2A38157C0047B423 /* MovieDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailView.swift; sourceTree = "<group>"; };
+		789CC88E2A382F020047B423 /* MovieDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailPresenter.swift; sourceTree = "<group>"; };
+		789CC8902A3830B60047B423 /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
+		789CC8922A3830DA0047B423 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +146,7 @@
 			children = (
 				7829FD192A37625F004D3271 /* GenreListPresenter.swift */,
 				7829FD1B2A376522004D3271 /* MovieByGenrePresenter.swift */,
+				789CC88E2A382F020047B423 /* MovieDetailPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -159,6 +166,8 @@
 				789CC8882A3813F70047B423 /* MovieBackdropCard.swift */,
 				789CC88A2A3815410047B423 /* MovieBackdropCarouselView.swift */,
 				789CC88C2A38157C0047B423 /* MovieDetailView.swift */,
+				789CC8902A3830B60047B423 /* SafariView.swift */,
+				789CC8922A3830DA0047B423 /* LoadingView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -237,8 +246,11 @@
 				7829FCF52A36EA60004D3271 /* ContentView.swift in Sources */,
 				789CC8892A3813F70047B423 /* MovieBackdropCard.swift in Sources */,
 				789CC8862A3813A70047B423 /* ImageLoader.swift in Sources */,
+				789CC8912A3830B60047B423 /* SafariView.swift in Sources */,
+				789CC8932A3830DA0047B423 /* LoadingView.swift in Sources */,
 				7829FCF32A36EA60004D3271 /* Mandiri_Movie_ViperApp.swift in Sources */,
 				7829FD072A3705D5004D3271 /* Movie.swift in Sources */,
+				789CC88F2A382F020047B423 /* MovieDetailPresenter.swift in Sources */,
 				7829FD112A37179E004D3271 /* GenreStore.swift in Sources */,
 				7829FD022A36F46E004D3271 /* Genre.swift in Sources */,
 				7829FD1A2A37625F004D3271 /* GenreListPresenter.swift in Sources */,

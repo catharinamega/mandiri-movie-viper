@@ -40,6 +40,15 @@ class GenreStore: GenreService {
         
     }
     
+    func fetchMovie(id: Int, completion: @escaping (Result<Movie, EndPointError>) -> ()) {
+            guard let url = URL(string: "\(baseAPIURL)/movie/\(id)") else {
+                completion(.failure(.invalidEndpoint))
+                return
+            }
+            self.loadURLAndDecode(url: url, params: [
+                "append_to_response": "videos,credits"
+            ], completion: completion)
+        }
     
     //    func searchGenre(query: String, completion: @escaping (Result<GenreResponse, EndPointError>) -> ()) {
     //        guard let url = URL(string: "\(baseAPIURL)/search/genre/") else {
