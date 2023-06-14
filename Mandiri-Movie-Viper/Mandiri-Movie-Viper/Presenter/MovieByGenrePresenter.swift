@@ -15,11 +15,13 @@ class MovieByGenrePresenter: ObservableObject {
     @Published var isLoading: Bool = false
     @Published var error: NSError?
     @Published var movie: Movie?
-    
     private let genreService: GenreService
+    
+//    private let interactor: MovieInteractor
     
     init(genreService: GenreService = GenreStore.shared) {
         self.genreService = genreService
+//        self.interactor = interactor
     }
     
     func loadMovies(genre_id:Int, completion: @escaping(Int, [Movie]?) -> ()) {
@@ -74,8 +76,6 @@ class MovieByGenrePresenter: ObservableObject {
     func setReviews(movie_id:Int, listReviews:[Review]){
         movie?.reviews = listReviews
 
-        
-//                print("USERNAME SET REVIEWS: \(listReviews[0].username)")
     }
     
     

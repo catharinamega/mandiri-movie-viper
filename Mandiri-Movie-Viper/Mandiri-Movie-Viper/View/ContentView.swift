@@ -33,18 +33,14 @@ struct ContentView: View {
                                 HStack(alignment: .top, spacing: 16) {
                                     ForEach(genre.movies ?? [], id: \.self) { movie in
                                         
-    //                                    Text(movie.title ?? "")
-                                        NavigationLink(destination: MovieDetailView( movie: movie)) {
+                                        NavigationLink(destination: MovieDetailView( movie: movie))
+                                        
+                                        {
                                             MovieBackdropCard(movie: movie)
                                                 .frame(width: 272, height: 200)
                                         }
                                         .buttonStyle(PlainButtonStyle())
-                                        .onAppear{
-//                                            self.movieList.loadMovieReviews(movie_id: movie.id ?? 0) { movie_id, list_movies in
-//                                                self.movieList.setReviews(movie_id: movie.id ?? 0, listReviews: list_movies ?? [])
-//                                            }
-                                        }
-
+                                        
                                         
                                     }
                                 }
@@ -76,19 +72,12 @@ struct ContentView: View {
                     //                    self.genreList.setMovies(genre_id: genre_id, listMovies: list_movies!)
                     //                }
                 }
-                //            load movie list berdasarkan genre
-                
-                //            completion kasi genreList.setMovies()
-                
+              
             }
         }
-       
         
     }
-    
-   
-    
-    
+
 }
 
 struct ContentView_Previews: PreviewProvider {

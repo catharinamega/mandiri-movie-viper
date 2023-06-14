@@ -26,26 +26,12 @@ struct MovieDetailView: View {
                     self.movieReviewDetailState.setReviews(movie_id: self.movie.id ?? 0, listReviews: self.movie.reviews ?? [])
                     
                 }
-//                self.movieDetailState.loadMovieReview(movie_id: self.movie.id ?? 0)
-                
-//                self.movieReviewDetailState.loadMovieReviews(movie_id: self.movie.id ?? 0) { movie_id,      list_reviews in
-//                    self.movieReviewDetailState.setReviews(movie_id: self.movie, listReviews: list_reviews ?? [])
-//                }
-//
-//
-//                self.movieDetailState.setReviews(movie_id: self.movie.id ?? 0, listReviews: self.movie.reviews ?? [])
-//
-//                self.movieReviewDetailState.setReviews(movie_id: self.movie, listReviews: self.movie.reviews ?? [])
             }
             
             if movieDetailState.movie != nil {
                 MovieDetailListView(movie: self.movieDetailState.movie!, detailList: movieReviewDetailState,
                                     reviewsList: $updatedReviews
                 )
-//                .onAppear{
-//                    self.movieDetailState.setReviews(movie_id: self.movie.id ?? 0, listReviews: self.movie.reviews ?? [])
-//
-//                }
                 
                 
             }
@@ -53,12 +39,6 @@ struct MovieDetailView: View {
         .navigationBarTitle(self.movie.title ?? "")
         .onAppear {
             self.movieDetailState.loadMovie(id: self.movie.id ?? 0)
-            
-            
-
-//            self.movieDetailState.setReviews(movie_id: self.movie.id ?? 0, listReviews: self.movie.reviews ?? [])
-//
-//            self.movieReviewDetailState.setReviews(movie_id: self.movie, listReviews: self.movie.reviews ?? [])
            
             self.movieReviewDetailState.loadMovieReviews(movie_id: self.movie.id ?? 0) { [self] movie_id, list_reviews in
 //                DI SINI BARU DIISI REVIEWSNYA
@@ -79,9 +59,6 @@ struct MovieDetailListView: View {
     let movie: Movie
     let detailList: MovieByGenrePresenter
     @Binding var reviewsList:[Review]
-//        @Binding var detailList: MovieDetailPresenter
-    
-    //    let review: Review
     @State private var selectedTrailer: MovieVideo?
     let imageLoader = ImageLoader()
     
