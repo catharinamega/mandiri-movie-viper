@@ -62,29 +62,6 @@ class GenreStore: GenreService {
         
     }
     
-//    func fetchReview(movie_id: Int, completion: @escaping (Result<Review, EndPointError>) -> ()) {
-//        guard let url = URL(string: "\(baseAPIURL)/movie/\(movie_id)\(EndPoint.review.rawValue)") else {
-//            completion(.failure(.invalidEndpoint))
-//            return
-//        }
-//        print("URL REVIEW 2 \(url)")
-//        print("MOVIE ID: \(movie_id)")
-//        self.loadURLAndDecode(url: url, completion: completion)
-//        }
-    
-    //    func searchGenre(query: String, completion: @escaping (Result<GenreResponse, EndPointError>) -> ()) {
-    //        guard let url = URL(string: "\(baseAPIURL)/search/genre/") else {
-    //            completion(.failure(.invalidEndpoint))
-    //            return
-    //        }
-    //        self.loadURLAndDecode(url: url, params: [
-    //            "language": "en-US",
-    //            "include_adult": "false",
-    //            "region": "US",
-    //            "query": query
-    //        ], completion: completion)
-    //    }
-    
     private func loadURLAndDecode<D: Decodable>(url: URL, params: [String: String]? = nil, completion: @escaping (Result<D, EndPointError>) -> ()) {
         
         print("PARAMS: \(params)")

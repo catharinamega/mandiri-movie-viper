@@ -12,7 +12,6 @@ struct ReviewResponse: Decodable{
 
 struct Review: Decodable, Identifiable{
     
-//    idnya dari id movie
 //    let id:Int?
     let id: String?
     let author:String?
@@ -20,7 +19,7 @@ struct Review: Decodable, Identifiable{
     
     
     func hash(into hasher: inout Hasher) {
-        hasher.combine(id) // Use the movie ID to generate the hash value
+        hasher.combine(id) 
     }
     
 
