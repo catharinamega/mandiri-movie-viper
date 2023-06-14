@@ -19,7 +19,9 @@ struct MovieDetailView: View {
     
     var body: some View {
         ZStack {
-            LoadingView(isLoading: self.movieDetailState.isLoading, error: self.movieDetailState.error) {
+            LoadingView(isLoading: self.movieDetailState.isLoading, error: self.movieDetailState.error)
+            
+            {
                 self.movieDetailState.loadMovie(id: self.movie.id ?? 0)
                 
                 self.movieDetailState.loadMovieReviews(movie_id: self.movie.id ?? 0) { movie_id,      list_movies in

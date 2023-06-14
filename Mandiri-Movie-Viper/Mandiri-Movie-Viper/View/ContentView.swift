@@ -68,10 +68,7 @@ struct ContentView: View {
             .onAppear{
                 
                 self.genreList.loadGenres {
-                    //                self.genres = self.genreList.genres
-                    //                self.movieList.loadMovies(genre_id: 37) { genre_id, list_movies in
-                    //                    self.genreList.setMovies(genre_id: genre_id, listMovies: list_movies!)
-                    //                }
+                   
                 }
               
             }
