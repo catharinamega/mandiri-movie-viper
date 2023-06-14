@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @ObservedObject private var genreList = GenreListPresenter()
     @ObservedObject private var movieList = MovieByGenrePresenter()
+    @ObservedObject private var router = MovieListDetailRouter()
     
     var genres: [Genre]?
     var movies: [Movie]?
@@ -33,8 +34,8 @@ struct ContentView: View {
                                 HStack(alignment: .top, spacing: 16) {
                                     ForEach(genre.movies ?? [], id: \.self) { movie in
                                         
-                                        NavigationLink(destination: MovieDetailView( movie: movie))
-                                        
+                                        NavigationLink(destination: router.makeDetailView(movie: movie)
+                                        )
                                         {
                                             MovieBackdropCard(movie: movie)
                                                 .frame(width: 272, height: 200)

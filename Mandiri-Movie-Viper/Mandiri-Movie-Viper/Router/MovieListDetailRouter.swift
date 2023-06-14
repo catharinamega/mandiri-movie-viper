@@ -8,8 +8,12 @@
 import Foundation
 import SwiftUI
 
-class MovieListDetailRouter {
-  
+class MovieListDetailRouter: ObservableObject {
+    
+    func makeDetailView(movie: Movie) -> some View {
+        
+        return  MovieDetailView( movie: movie)
+    }
 }
 
 
